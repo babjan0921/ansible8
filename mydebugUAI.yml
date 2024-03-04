@@ -1,9 +1,9 @@
 ---
-- hosts: webservers
-  become: yes
+- name: Ansible debug module in action
+  hosts: all
   tasks:
-  - name: i want to know host name
-    command:  hostname -f
+  - name: print a simple statement
+    command:  pwd
     register: myresult
 
   - name: display  myresult
